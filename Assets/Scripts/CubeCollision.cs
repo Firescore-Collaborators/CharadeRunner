@@ -18,8 +18,8 @@ public class CubeCollision : MonoBehaviour
             UIPanel.SetActive(true);
             Player.SetActive(true);
             other.gameObject.GetComponent<Animator>().enabled = false;
-            TPPCamera.SetActive(false);
-            FPPCamera.SetActive(true);
+            LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position,1f);
+            TPPCamera.GetComponent<CameraFollow>().enabled = false;
         }
 
     }
