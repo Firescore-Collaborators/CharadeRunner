@@ -19,6 +19,7 @@ public class CubeCollision : MonoBehaviour
             Player.SetActive(true);
             other.gameObject.GetComponent<Animator>().enabled = false;
             LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position,1f);
+            LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 1f);
             TPPCamera.GetComponent<CameraFollow>().enabled = false;
         }
 
