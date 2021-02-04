@@ -8,8 +8,9 @@ public class CubeCollision : MonoBehaviour
     public GameObject TPPCamera;
     public GameObject FPPCamera;
     public GameObject Player;
+    public Animator PlayerAnim;
+    public Transform PlayerPos;
 
-   
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,12 +18,16 @@ public class CubeCollision : MonoBehaviour
         {
             UIPanel.SetActive(true);
             Player.SetActive(true);
-            other.gameObject.GetComponent<Animator>().enabled = false;
-            LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position,1f);
-            LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 1f);
+            other.gameObject.GetComponent<Animator>().SetTrigger("idle");
+            LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position,0.5f);
+            LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 0.5f);
             TPPCamera.GetComponent<CameraFollow>().enabled = false;
         }
-
     }
 
+    public void RightAnswer()
+    {
+        PlayerAnim.SetTrigger("run");
+        PlayerAnim.gameObject.transform.rotation = PlayerPos.rotation;
+    }
 }
