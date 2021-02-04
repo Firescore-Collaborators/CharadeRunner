@@ -9,16 +9,18 @@ public class LookAt : MonoBehaviour
     public Transform TppCamPos;
     public GameObject TPPCamera;
 
+    private int count;
     private void Start()
     {
-        LeanTween.moveLocal(Player, Positons[0].position,5f);
+        count = 0;
+        LeanTween.moveLocal(Player, Positons[count].position,5f);
     }
 
 
     public void RightAnswer()
     {
         Player.GetComponent<Animator>().SetTrigger("run");
-        LeanTween.moveLocal(Player, Positons[1].position, 5f);
+        LeanTween.moveLocal(Player, Positons[++count].position, 5f);
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
         TPPCamera.GetComponent<CameraFollow>().enabled = true;
