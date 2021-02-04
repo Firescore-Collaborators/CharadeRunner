@@ -25,9 +25,5 @@ public class CubeCollision : MonoBehaviour
         }
     }
 
-    public void RightAnswer()
-    {
-        PlayerAnim.SetTrigger("run");
-        PlayerAnim.gameObject.transform.rotation = PlayerPos.rotation;
-    }
+  
 }
