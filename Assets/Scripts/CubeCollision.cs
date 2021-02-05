@@ -28,5 +28,8 @@ public class CubeCollision : MonoBehaviour
         }
     }
 
-  
+    private void OnTriggerExit(Collider other)
+    {
+      
+    }
 }
