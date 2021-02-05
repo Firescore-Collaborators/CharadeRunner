@@ -9,7 +9,7 @@ public class LookAt : MonoBehaviour
     public Transform TppCamPos;
     public GameObject TPPCamera;
 
-    private int count;
+    public static int count;
     private void Start()
     {
         count = 0;
