@@ -5,6 +5,8 @@ using UnityEngine;
 public class winning : MonoBehaviour
 {
     public GameObject SkateBoard;
+    public GameObject MainCAm;
+    public GameObject WinCAm;
 
 
     private void OnTriggerEnter(Collider other)
@@ -13,6 +15,8 @@ public class winning : MonoBehaviour
         {
             SkateBoard.SetActive(true);
             other.gameObject.SetActive(false);
+            MainCAm.SetActive(false);
+            WinCAm.SetActive(true);
         }
     }
 }
