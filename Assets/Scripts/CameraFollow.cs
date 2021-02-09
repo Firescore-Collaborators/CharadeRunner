@@ -6,18 +6,21 @@ public class CameraFollow : MonoBehaviour
 {
 
     [SerializeField] GameObject player;
-    private float offset;
+    private float offsetz;
+    private float offsety;
     private Vector3 pos;
 
     void Start()
     {
         pos = transform.position;
-        offset = transform.position.z - player.transform.position.z;
+        offsetz = transform.position.z - player.transform.position.z;
+        offsety = transform.position.y - player.transform.position.y;
     }
 
     void Update()
     {
-        pos.z = player.transform.position.z + offset;
+        pos.z = player.transform.position.z + offsetz;
+        pos.y = player.transform.position.y + offsety;
         transform.position = pos;
 
     }
