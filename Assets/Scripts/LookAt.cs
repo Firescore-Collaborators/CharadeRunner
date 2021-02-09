@@ -21,8 +21,19 @@ public class LookAt : MonoBehaviour
     }
 
 
+
+
     public void RightAnswer()
     {
+
+        StartCoroutine(Right());
+    }
+
+
+    IEnumerator Right()
+    {
+        ConfettiPlay();
+        yield return new WaitForSeconds(3f);
         Hint[count].SetActive(false);
         Player.GetComponent<Animator>().SetTrigger("run");
         Door[count].SetTrigger("open");
@@ -30,7 +41,6 @@ public class LookAt : MonoBehaviour
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
         TPPCamera.GetComponent<CameraFollow>().enabled = true;
-       
     }
 
     public void ConfettiPlay()
