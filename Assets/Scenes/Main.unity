@@ -12319,7 +12319,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1782753390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13341,7 +13341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1927524017}
-  speed: 4
+  speed: 8
 --- !u!143 &1927524017
 CharacterController:
   m_ObjectHideFlags: 0
