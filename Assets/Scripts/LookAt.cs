@@ -9,6 +9,7 @@ public class LookAt : MonoBehaviour
     public Transform TppCamPos;
     public GameObject TPPCamera;
     public Animator[] Door;
+    public Animator CorrectText;
     public GameObject[] Hint;
 
     public ParticleSystem[] confetti;
@@ -33,8 +34,8 @@ public class LookAt : MonoBehaviour
     IEnumerator Right()
     {
         ConfettiPlay();
+        CorrectText.SetTrigger("text");
         yield return new WaitForSeconds(3f);
-        Hint[count].SetActive(false);
         Player.GetComponent<Animator>().SetTrigger("run");
         Door[count].SetTrigger("open");
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
