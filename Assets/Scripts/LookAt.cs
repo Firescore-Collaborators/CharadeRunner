@@ -14,11 +14,18 @@ public class LookAt : MonoBehaviour
 
     public ParticleSystem[] confetti;
 
+    public GameObject[] AICharacter;
     public static int count;
+
     private void Start()
     {
         count = 0;
         LeanTween.moveLocal(Player, Positons[count].position,3f);
+        foreach (GameObject ai in AICharacter)
+        {
+            LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
+        }
+     
     }
 
 

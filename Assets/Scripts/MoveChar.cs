@@ -17,6 +17,7 @@ public class MoveChar : MonoBehaviour
     
     IEnumerator Move()
     {
+        yield return new WaitForSeconds(0.5f);
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
         count++;
