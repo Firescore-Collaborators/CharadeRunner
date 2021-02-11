@@ -24778,15 +24778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3da1eef0e94091458c71357ec296241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AICharacter:
-  - {fileID: 268475256}
-  - {fileID: 1701267786}
-  - {fileID: 1902369681}
-  Location:
-  - {fileID: 953707341}
-  - {fileID: 927601144}
-  - {fileID: 847193844}
-  - {fileID: 1646631026}
 --- !u!1 &1962951311
 GameObject:
   m_ObjectHideFlags: 0
@@ -25925,6 +25916,10 @@ MonoBehaviour:
   confetti:
   - {fileID: 423478585}
   - {fileID: 1091610100}
+  AICharacter:
+  - {fileID: 268475256}
+  - {fileID: 1701267786}
+  - {fileID: 1902369681}
 --- !u!4 &2056134743
 Transform:
   m_ObjectHideFlags: 0

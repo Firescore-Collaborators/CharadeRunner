@@ -14,7 +14,7 @@ public class LookAt : MonoBehaviour
 
     public ParticleSystem[] confetti;
 
-    public GameObject[] AICharacter;
+    public List<GameObject> AICharacter;
     public static int count;
 
     private void Start()
@@ -25,7 +25,7 @@ public class LookAt : MonoBehaviour
         {
             LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
         }
-     
+        AICharacter.RemoveAt(AICharacter.Count-1);
     }
 
 
@@ -43,12 +43,24 @@ public class LookAt : MonoBehaviour
         ConfettiPlay();
         CorrectText.SetTrigger("text");
         yield return new WaitForSeconds(3f);
+        
         Player.GetComponent<Animator>().SetTrigger("run");
         Door[count].SetTrigger("open");
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
+        if(AICharacter.Count > 0)
+        {
+            foreach (GameObject ai in AICharacter)
+            {
+                LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
+            }
+
+            AICharacter.RemoveAt(AICharacter.Count - 1);
+        }
+       
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
         TPPCamera.GetComponent<CameraFollow>().enabled = true;
+
     }
 
     public void ConfettiPlay()
