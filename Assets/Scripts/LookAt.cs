@@ -15,6 +15,8 @@ public class LookAt : MonoBehaviour
     public ParticleSystem[] confetti;
 
     public List<GameObject> AICharacter;
+   public AIDoors[] AIDoor;
+
     public static int count;
 
     private void Start()
@@ -45,7 +47,7 @@ public class LookAt : MonoBehaviour
         yield return new WaitForSeconds(3f);
         
         Player.GetComponent<Animator>().SetTrigger("run");
-        Door[count].SetTrigger("open");
+        OpenDoor();
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
         if(AICharacter.Count > 0)
         {
@@ -71,4 +73,11 @@ public class LookAt : MonoBehaviour
         }
     }
 
+    public void OpenDoor()
+    {
+        foreach( GameObject door in AIDoor[count].Doors)
+        {
+           door.GetComponent<Animator>().SetTrigger("open");
+        }
+    }
 }
