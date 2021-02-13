@@ -17,53 +17,53 @@ public class MoveChar : MonoBehaviour
     
     IEnumerator Move()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.4f);
         this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         count++;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.8f);
 
         FiftyText.SetActive(true);
         this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
-        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
         FiftyText.SetActive(false);
         count++;
-        yield return new WaitForSeconds(0.5f);
-
-
-        FiftyText.SetActive(true);
-        this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
-        yield return new WaitForSeconds(0.5f);
-        FiftyText.SetActive(false);
-        count++;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
 
 
         FiftyText.SetActive(true);
         this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
-        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
         FiftyText.SetActive(false);
         count++;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
+
 
         FiftyText.SetActive(true);
         this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
-        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
         FiftyText.SetActive(false);
         count++;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
 
         FiftyText.SetActive(true);
         this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 1f);
-        yield return new WaitForSeconds(0.5f);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
         FiftyText.SetActive(false);
         count++;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.4f);
+
+        FiftyText.SetActive(true);
+        this.gameObject.transform.LookAt(BonusPos[count]);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
+        FiftyText.SetActive(false);
+        count++;
+        yield return new WaitForSeconds(0.4f);
         ConfettiPlay();
     }
     public void ConfettiPlay()
