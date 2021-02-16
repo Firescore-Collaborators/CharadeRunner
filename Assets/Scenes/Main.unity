@@ -3316,6 +3316,7 @@ MonoBehaviour:
   - {fileID: 1795183106}
   - {fileID: 170914484}
   FiftyText: {fileID: 518021707}
+  Player: {fileID: 1201643939}
   confetti:
   - {fileID: 1826335760}
   - {fileID: 372369107}
@@ -8150,7 +8151,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 511609990}
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: -10.503851, y: 5.008319, z: 177.32721}
+  m_LocalPosition: {x: -10.37, y: 5.008319, z: 177.32721}
   m_LocalScale: {x: 1.3376665, y: 0.16424, z: 50.862965}
   m_Children: []
   m_Father: {fileID: 1752435592}
@@ -16139,7 +16140,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1537404880}
+      - m_Target: {fileID: 385219761}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -19595,7 +19596,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253179295}
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: -6.5388513, y: 5.008319, z: 177.32721}
+  m_LocalPosition: {x: -6.405, y: 5.008319, z: 177.32721}
   m_LocalScale: {x: 1.3376665, y: 0.16424, z: 50.862965}
   m_Children: []
   m_Father: {fileID: 1752435592}
@@ -21171,7 +21172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386436139}
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: -7.8398514, y: 5.008319, z: 177.32721}
+  m_LocalPosition: {x: -7.7060003, y: 5.008319, z: 177.32721}
   m_LocalScale: {x: 1.322855, y: 0.16424, z: 50.862965}
   m_Children: []
   m_Father: {fileID: 1752435592}
@@ -22190,7 +22191,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472601946}
   m_LocalRotation: {x: 0.043619405, y: -0, z: -0, w: 0.9990483}
-  m_LocalPosition: {x: -9.171851, y: 5.008319, z: 177.32721}
+  m_LocalPosition: {x: -9.038, y: 5.008319, z: 177.32721}
   m_LocalScale: {x: 1.3338635, y: 0.16424, z: 50.862965}
   m_Children: []
   m_Father: {fileID: 1752435592}
@@ -24555,7 +24556,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1537404880}
+      - m_Target: {fileID: 1483038124}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:

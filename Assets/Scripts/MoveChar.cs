@@ -7,13 +7,13 @@ public class MoveChar : MonoBehaviour
     public Transform[] BonusPos;
     int count = 0;
     public GameObject FiftyText;
+    public Animator Player;
     public ParticleSystem[] confetti;
     public void Start()
     {
         StartCoroutine(Move());
     }
 
-    
     
     IEnumerator Move()
     {
@@ -65,6 +65,7 @@ public class MoveChar : MonoBehaviour
         count++;
         yield return new WaitForSeconds(0.4f);
         ConfettiPlay();
+        Player.SetTrigger("dance");
     }
     public void ConfettiPlay()
     {

@@ -27,7 +27,7 @@ public class CubeCollision : MonoBehaviour
 
     IEnumerator collionDetect(Collider other)
     {
-        Player.SetActive(true);
+        //Player.SetActive(true);
         other.gameObject.GetComponent<Animator>().SetTrigger("idle");
         LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position, 0.5f);
         LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 0.5f);
