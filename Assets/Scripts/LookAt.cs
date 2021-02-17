@@ -10,7 +10,6 @@ public class LookAt : MonoBehaviour
     public GameObject TPPCamera;
     public Animator[] Door;
     public Animator CorrectText;
-    public GameObject[] Hint;
 
     public ParticleSystem[] confetti;
 
