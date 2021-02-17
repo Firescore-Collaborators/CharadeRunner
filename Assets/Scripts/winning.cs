@@ -23,7 +23,7 @@ public class winning : MonoBehaviour
     IEnumerator Win(Collider other)
     {
         other.gameObject.GetComponent<Animator>().SetTrigger("jump");
-        yield return new WaitForSeconds(0.6f);
+        yield return new WaitForSeconds(0.35f);
         SkateBoard.SetActive(true);
         other.gameObject.SetActive(false);
         MainCAm.SetActive(false);
