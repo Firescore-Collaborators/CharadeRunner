@@ -12,8 +12,14 @@ public class CubeCollision : MonoBehaviour
     public Animator PlayerAnim;
     public Transform PlayerPos;
 
- 
-   
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Hand.SetActive(true);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -34,6 +40,6 @@ public class CubeCollision : MonoBehaviour
         TPPCamera.GetComponent<CameraFollow>().enabled = false;
         yield return new WaitForSeconds(0.5f);
         UIPanel[LookAt.count].SetActive(true);
-        Hand.SetActive(true);
+        
     }
 }

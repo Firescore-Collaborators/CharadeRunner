@@ -6,10 +6,15 @@ public class Hand : MonoBehaviour
 {
     Vector3 handpos;
 
+    private void Awake()
+    {
+        handpos = Input.mousePosition;
+        handpos.y = handpos.y - 25f;
+        transform.position = handpos;
+    }
     private void Start()
     {
         Application.targetFrameRate = 60;
-        Cursor.visible = false;
     }
     void Update()
     {
