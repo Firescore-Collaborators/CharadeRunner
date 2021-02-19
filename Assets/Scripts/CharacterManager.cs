@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAt : MonoBehaviour
+public class CharacterManager : MonoBehaviour
 {
     public GameObject Player;
     public Transform[] Positons;
@@ -14,8 +14,6 @@ public class LookAt : MonoBehaviour
 
     public ParticleSystem[] confetti;
 
-    public List<GameObject> AICharacter;
-   public AIDoors[] AIDoor;
 
     public static int count;
 
@@ -23,11 +21,7 @@ public class LookAt : MonoBehaviour
     {
         count = 0;
         LeanTween.moveLocal(Player, Positons[count].position,3f);
-        foreach (GameObject ai in AICharacter)
-        {
-            LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
-        }
-        AICharacter.RemoveAt(AICharacter.Count-1);
+      
     }
 
 
@@ -44,19 +38,11 @@ public class LookAt : MonoBehaviour
         ConfettiPlay();
         CorrectText.SetTrigger("text");
         yield return new WaitForSeconds(1f);
-        OpenDoor();
-        yield return new WaitForSeconds(2f);
+        Door[count].SetTrigger("open");
+        yield return new WaitForSeconds(1f);
         Player.GetComponent<Animator>().SetTrigger("run");
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
-        if(AICharacter.Count > 0)
-        {
-            foreach (GameObject ai in AICharacter)
-            {
-                LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
-            }
-
-            AICharacter.RemoveAt(AICharacter.Count - 1);
-        }
+       
        
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
@@ -72,13 +58,7 @@ public class LookAt : MonoBehaviour
         }
     }
 
-    public void OpenDoor()
-    {
-        foreach( GameObject door in AIDoor[count].Doors)
-        {
-           door.GetComponent<Animator>().SetTrigger("open");
-        }
-    }
+  
 
 
     public void WrongAnswer()

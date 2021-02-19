@@ -39,7 +39,7 @@ public class CubeCollision : MonoBehaviour
         LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 0.5f);
         TPPCamera.GetComponent<CameraFollow>().enabled = false;
         yield return new WaitForSeconds(0.5f);
-        UIPanel[LookAt.count].SetActive(true);
+        UIPanel[CharacterManager.count].SetActive(true);
         
     }
 }
