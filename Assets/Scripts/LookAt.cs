@@ -31,8 +31,6 @@ public class LookAt : MonoBehaviour
     }
 
 
-
-
     public void RightAnswer()
     {
 
@@ -54,7 +52,7 @@ public class LookAt : MonoBehaviour
         {
             foreach (GameObject ai in AICharacter)
             {
-                LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), Random.Range(2.5f, 4f));
+                LeanTween.moveLocal(ai, new Vector3(ai.transform.position.x, ai.transform.position.y, Positons[count].position.z), 3f);
             }
 
             AICharacter.RemoveAt(AICharacter.Count - 1);
