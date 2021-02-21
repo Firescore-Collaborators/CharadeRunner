@@ -7,10 +7,12 @@ public class AIManager : MonoBehaviour
     public Transform[] position;
     public Animator[] Door;
     int count;
+    Animator animator;
 
     private void Awake()
     {
         count = 0;
+        animator = gameObject.GetComponent<Animator>();
     }
 
     private void Start()
@@ -21,21 +23,32 @@ public class AIManager : MonoBehaviour
     IEnumerator AIRun()
     {
         LeanTween.moveLocal(gameObject,new Vector3(gameObject.transform.position.x,gameObject.transform.position.y,position[count].position.z),3f);
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("idle");
+         yield return new WaitForSeconds(Random.Range(3f, 7f));
+        animator.SetTrigger("run");
         
-        yield return new WaitForSeconds(Random.Range(6f, 10f));
         Door[count].SetTrigger("open");
         count++;
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
-        yield return new WaitForSeconds(Random.Range(6f, 10f));
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("idle");
+        yield return new WaitForSeconds(Random.Range(3f, 7f));
+        animator.SetTrigger("run");
+
         Door[count].SetTrigger("open");
         count++;
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
-        yield return new WaitForSeconds(Random.Range(6f, 10f));
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("idle");
+        yield return new WaitForSeconds(Random.Range(3f, 7f));
+        animator.SetTrigger("run");
         Door[count].SetTrigger("open");
         count++;
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
-        yield return new WaitForSeconds(Random.Range(6f, 10f));
-        Door[count].SetTrigger("open");
+        yield return new WaitForSeconds(3f);
+        animator.SetTrigger("idle");
+        yield return new WaitForSeconds(Random.Range(3f, 7f));
         count++;
     }
 }
