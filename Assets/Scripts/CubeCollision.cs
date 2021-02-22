@@ -19,6 +19,11 @@ public class CubeCollision : MonoBehaviour
         {
             Hand.SetActive(true);
         }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            Hand.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -35,7 +40,8 @@ public class CubeCollision : MonoBehaviour
     {
         Player.SetActive(true);
         other.gameObject.GetComponent<Animator>().SetTrigger("idle");
-        LeanTween.moveLocal(TPPCamera, FPPCamera.gameObject.transform.position, 0.5f);
+        yield return new WaitForSeconds(0.3f);
+        LeanTween.moveLocal(TPPCamera, FPPCamera.transform.position, 0.5f);
         LeanTween.rotateLocal(TPPCamera, FPPCamera.gameObject.transform.rotation.eulerAngles, 0.5f);
         TPPCamera.GetComponent<CameraFollow>().enabled = false;
         yield return new WaitForSeconds(0.5f);
