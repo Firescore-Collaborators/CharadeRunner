@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterManager : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CharacterManager : MonoBehaviour
     public GameObject TPPCamera;
     public Animator[] Door;
     public Animator CorrectText;
+    public Animator WrongText;
 
     public ParticleSystem[] confetti;
 
@@ -43,7 +45,6 @@ public class CharacterManager : MonoBehaviour
         Player.GetComponent<Animator>().SetTrigger("run");
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
        
-       
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
         TPPCamera.GetComponent<CameraFollow>().enabled = true;
@@ -70,14 +71,13 @@ public class CharacterManager : MonoBehaviour
 
     IEnumerator Wrong()
     {
-        LeanTween.moveLocal(Player, FailPos.position, 1f);
-        Player.GetComponent<Animator>().SetTrigger("run");
-        LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
-        LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
-        TPPCamera.GetComponent<CameraFollow>().enabled = true;
+        WrongText.SetTrigger("text");
         yield return new WaitForSeconds(1f);
-        Player.GetComponent<Animator>().applyRootMotion = enabled;
-        Player.GetComponent<Animator>().SetTrigger("fall");
     }
 
+
+    public void ChangeColor(Image image)
+    {
+        image.color = Color.gray;
+    }
 }
