@@ -8,22 +8,13 @@ public class CubeCollision : MonoBehaviour
     public GameObject TPPCamera;
     public GameObject FPPCamera;
     public GameObject Player;
-    public GameObject Hand;
     public Animator PlayerAnim;
     public Transform PlayerPos;
 
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            Hand.SetActive(true);
-        }
-
-        if (Input.GetMouseButtonUp(0))
-        {
-            Hand.SetActive(false);
-        }
+        
     }
 
     private void OnTriggerEnter(Collider other)
