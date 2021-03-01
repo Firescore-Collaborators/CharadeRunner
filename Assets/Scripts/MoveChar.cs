@@ -9,6 +9,7 @@ public class MoveChar : MonoBehaviour
     public Animator FiftyText;
     public Animator Player;
     public ParticleSystem[] confetti;
+    public GameObject points;
     public void Start()
     {
         StartCoroutine(Move());
@@ -22,7 +23,7 @@ public class MoveChar : MonoBehaviour
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         count++;
         yield return new WaitForSeconds(0.8f);
-
+        points.SetActive(true);
         FiftyText.SetTrigger("fifty");
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
@@ -60,7 +61,7 @@ public class MoveChar : MonoBehaviour
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         yield return new WaitForSeconds(0.4f);
-       
+        points.SetActive(false);
         count++;
         yield return new WaitForSeconds(0.4f);
         ConfettiPlay();
