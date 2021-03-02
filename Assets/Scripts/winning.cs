@@ -8,20 +8,19 @@ public class winning : MonoBehaviour
     public GameObject MainCAm;
     public GameObject WinCAm;
     public GameObject skate;
-
+    public GameObject Strip;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Player"))
         {
             StartCoroutine(Win(other));
-            
-           
         }
     }
 
     IEnumerator Win(Collider other)
     {
+        Strip.SetActive(false);
         other.gameObject.GetComponent<Animator>().SetTrigger("jump");
         yield return new WaitForSeconds(0.35f);
         SkateBoard.SetActive(true);

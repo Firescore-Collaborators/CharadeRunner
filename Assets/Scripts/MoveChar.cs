@@ -65,7 +65,10 @@ public class MoveChar : MonoBehaviour
         count++;
         yield return new WaitForSeconds(0.4f);
         ConfettiPlay();
+        LeanTween.rotateY(Player.gameObject, 180, 0.5f);
+        yield return new WaitForSeconds(0.5f);
         Player.SetTrigger("dance");
+
     }
     public void ConfettiPlay()
     {

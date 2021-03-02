@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CharacterManager : MonoBehaviour
 {
     public GameObject Player;
+    public GameObject Strip;
     public Transform[] Positons;
     public Transform TppCamPos;
     public Transform FailPos;
@@ -14,6 +15,8 @@ public class CharacterManager : MonoBehaviour
     public Animator CorrectText;
     public Animator WrongText;
 
+    public RectTransform[] IconPosition;
+    public RectTransform icon;
     public ParticleSystem[] confetti;
 
 
@@ -23,7 +26,8 @@ public class CharacterManager : MonoBehaviour
     {
         count = 0;
         LeanTween.moveLocal(Player, Positons[count].position,3f);
-      
+
+        LeanTween.moveX(icon, IconPosition[count].anchoredPosition.x, 3f);
     }
 
 
@@ -42,9 +46,10 @@ public class CharacterManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Door[count].SetTrigger("open");
         yield return new WaitForSeconds(1f);
+        Strip.SetActive(true);
         Player.GetComponent<Animator>().SetTrigger("run");
         LeanTween.moveLocal(Player, Positons[++count].position, 3f);
-       
+        LeanTween.moveX(icon, IconPosition[count].anchoredPosition.x, 3f);
         LeanTween.moveLocal(TPPCamera, TppCamPos.position, 1f);
         LeanTween.rotateLocal(TPPCamera, TppCamPos.rotation.eulerAngles, 1f);
         TPPCamera.GetComponent<CameraFollow>().enabled = true;
