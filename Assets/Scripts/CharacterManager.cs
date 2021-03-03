@@ -89,8 +89,28 @@ public class CharacterManager : MonoBehaviour
 
     public void ChangeGreen(Image image)
     {
+        StartCoroutine(Green(image));
+    }
+
+    IEnumerator Green(Image image)
+    {
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+        image.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+        image.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
+
+        image.color = Color.green;
+        yield return new WaitForSeconds(0.2f);
+        image.color = Color.white;
+        yield return new WaitForSeconds(0.2f);
         image.color = Color.green;
     }
+
 
     public void DisableGB(GameObject Panel)
     {
