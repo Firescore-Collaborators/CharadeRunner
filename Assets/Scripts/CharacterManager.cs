@@ -85,4 +85,21 @@ public class CharacterManager : MonoBehaviour
     {
         image.color = Color.gray;
     }
+
+
+    public void ChangeGreen(Image image)
+    {
+        image.color = Color.green;
+    }
+
+    public void DisableGB(GameObject Panel)
+    {
+        StartCoroutine(disable(Panel));
+    }
+
+    IEnumerator disable(GameObject Panel)
+    {
+        yield return new WaitForSeconds(2f);
+        Panel.SetActive(false);
+    }
 }

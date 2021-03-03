@@ -34,6 +34,7 @@ public class AIManager : MonoBehaviour
         
         Door[count].SetTrigger("open");
         count++;
+        yield return new WaitForSeconds(1f);
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
         LeanTween.moveX(icon, IconPosition[count].anchoredPosition.x, 3f);
         yield return new WaitForSeconds(3f);
@@ -43,6 +44,7 @@ public class AIManager : MonoBehaviour
 
         Door[count].SetTrigger("open");
         count++;
+        yield return new WaitForSeconds(1f);
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
         LeanTween.moveX(icon, IconPosition[count].anchoredPosition.x, 3f);
         yield return new WaitForSeconds(3f);
@@ -51,6 +53,7 @@ public class AIManager : MonoBehaviour
         animator.SetTrigger("run");
         Door[count].SetTrigger("open");
         count++;
+        yield return new WaitForSeconds(1f);
         LeanTween.moveLocal(gameObject, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, position[count].position.z), 3f);
         LeanTween.moveX(icon, IconPosition[count].anchoredPosition.x, 3f);
         yield return new WaitForSeconds(3f);
