@@ -22,7 +22,7 @@ public class winning : MonoBehaviour
     {
         Strip.SetActive(false);
         other.gameObject.GetComponent<Animator>().SetTrigger("jump");
-        yield return new WaitForSeconds(0.35f);
+        yield return new WaitForSeconds(0.3f);
         SkateBoard.SetActive(true);
         other.gameObject.SetActive(false);
         MainCAm.SetActive(false);

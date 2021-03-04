@@ -24,24 +24,12 @@ public class MoveChar : MonoBehaviour
         count++;
         yield return new WaitForSeconds(0.8f);
         points.SetActive(true);
-        FiftyText.SetTrigger("fifty");
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         yield return new WaitForSeconds(0.4f);
         count++;
         yield return new WaitForSeconds(0.4f);
 
-
-        FiftyText.SetTrigger("fifty");
-        this.gameObject.transform.LookAt(BonusPos[count]);
-        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
-        yield return new WaitForSeconds(0.4f);
-        
-        count++;
-        yield return new WaitForSeconds(0.4f);
-
-
-        FiftyText.SetTrigger("fifty");
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         yield return new WaitForSeconds(0.4f);
@@ -49,7 +37,14 @@ public class MoveChar : MonoBehaviour
         count++;
         yield return new WaitForSeconds(0.4f);
 
-        FiftyText.SetTrigger("fifty");
+
+        this.gameObject.transform.LookAt(BonusPos[count]);
+        LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
+        yield return new WaitForSeconds(0.4f);
+        
+        count++;
+        yield return new WaitForSeconds(0.4f);
+
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         yield return new WaitForSeconds(0.4f);
@@ -57,7 +52,6 @@ public class MoveChar : MonoBehaviour
         count++;
         yield return new WaitForSeconds(0.4f);
 
-        FiftyText.SetTrigger("fifty");
         this.gameObject.transform.LookAt(BonusPos[count]);
         LeanTween.moveLocal(this.gameObject, BonusPos[count].position, 0.8f);
         yield return new WaitForSeconds(0.4f);
