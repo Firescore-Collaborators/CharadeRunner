@@ -7,10 +7,7 @@ public class CubeCollision : MonoBehaviour
     public GameObject[] UIPanel;
     public GameObject TPPCamera;
     public GameObject FPPCamera;
-    public GameObject Player;
     public GameObject Strip;
-    public Animator PlayerAnim;
-    public Transform PlayerPos;
 
 
     private void Update()
@@ -31,7 +28,6 @@ public class CubeCollision : MonoBehaviour
     IEnumerator collionDetect(Collider other)
     {
         Strip.SetActive(false);
-        Player.SetActive(true);
         other.gameObject.GetComponent<Animator>().SetTrigger("idle");
         yield return new WaitForSeconds(0.3f);
         LeanTween.moveLocal(TPPCamera, FPPCamera.transform.position, 0.5f);
