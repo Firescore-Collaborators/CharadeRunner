@@ -1,17 +1,117 @@
 fileFormatVersion: 2
 guid: bcd181ec9a7423e409449e0c71c3b7f2
 ModelImporter:
-  serializedVersion: 19301
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TPFeetA01
+    second: {fileID: 2100000, guid: f27a6c5792e29401f8ba352f51d49433, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairA01
+    second: {fileID: 2100000, guid: f46d378b56e96440eb5c383583889b31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairB01
+    second: {fileID: 2100000, guid: 9cb1c23b82b534cbd918388a6c7f9b7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairC01
+    second: {fileID: 2100000, guid: de0377e79ab2f4e4dac1e0f5c863dfe5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairD01
+    second: {fileID: 2100000, guid: 7cac13707ce894d0b824f7cf4af4afd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairE01
+    second: {fileID: 2100000, guid: 6a1cbc41047c5425ebd72b3ebfd48ed0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBHairF01
+    second: {fileID: 2100000, guid: a93d1d8719ea1499e8eeb3fcf8307d0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBJacket02
+    second: {fileID: 2100000, guid: e33ad1fa21ec945f5a5de846727bfbbc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBTshirt09
+    second: {fileID: 2100000, guid: 1a87247e9d89847579df3606e3ab92c1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTBoyA01
+    second: {fileID: 2100000, guid: 43a9694ef8c3449478a80b8d3472e9cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTFeetB01
+    second: {fileID: 2100000, guid: 2ce5de92da275428eab1d98fefeed4fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTGFeetC02
+    second: {fileID: 2100000, guid: f1fe38e8819dd4a13b33bb69db1e2a2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTHatB01
+    second: {fileID: 2100000, guid: 953abdb8d47414f519cec1af8ac4661d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTHoodB01
+    second: {fileID: 2100000, guid: 2662dd6eac3c64bfe96c22f040e91e4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTLegs01
+    second: {fileID: 2100000, guid: feceac5082f9d4fdfb77b4eff742b257, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TThatA01
+    second: {fileID: 2100000, guid: f6b031723712c488c91da2da7c245abf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TTsweater01
+    second: {fileID: 2100000, guid: ab88bc6bc6b9a4111885b3249ed8a9d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye4
+    second: {fileID: 2100000, guid: 47b94d157b368415ea092e713e26fd7b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: glassesB01
+    second: {fileID: 2100000, guid: 7c1dc8a787f6d4b8087ecd62c04805c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: teeth
+    second: {fileID: 2100000, guid: 43e4c627b5321409694412312169efd5, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -46,7 +146,6 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
-    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
